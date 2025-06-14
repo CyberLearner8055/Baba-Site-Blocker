@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Site Blocker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      padding: 15px;
+      background-color: #f4f4f8;
+      width: 300px;
+    }
+
+    .hidden { display: none; }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    li {
+      background: #ffffff;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+    }
+
+    .remove-btn {
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+
+    .remove-btn:hover {
+      background-color: #b02a37;
+    }
+
+    .credit {
+      margin-top: 20px;
+      font-size: 0.8em;
+      text-align: center;
+      color: #888;
+    }
+
+    .credit span {
+      color: #00aa88;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password View -->
+  <div id="loginView">
+    <h2>Enter Password</h2>
+    <input type="password" id="loginPass" placeholder="Password" />
+    <button id="loginBtn">Unlock</button>
+    <p id="loginError" style="color:red; display:none;">Wrong password!</p>
+  </div>
+
+  <!-- Main UI -->
+  <div id="mainView" class="hidden">
+    <h2>Blocked Sites</h2>
+    <input type="text" id="siteInput" placeholder="e.g. facebook.com" />
+    <button id="addBtn">Add to Block List</button>
+    <ul id="siteList"></ul>
+    <div class="credit">Made by <span>Developer Mohammed Farhan</span></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
